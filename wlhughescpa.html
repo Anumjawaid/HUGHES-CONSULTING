@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WL Hughes Consulting, LLC | Financial & Strategic Advisory for Nonprofits</title>
+  <meta name="description" content="CPA-led financial consulting for nonprofits and small businesses in Jacksonville, FL. Specializing in data analytics, budgeting, policy development, and strategic planning. 25+ years of CFO experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #0D1B3E;
+      --navy-mid:    #1A4080;
+      --navy-light:  #3A5080;
+      --silver:      #C4CEDE;
+      --silver-light:#E8EEF7;
+      --muted-blue:  #8FA0C8;
+      --link-blue:   #7EB3E8;
+      --white:       #ffffff;
+      --off-white:   #f7f8fa;
+      --border:      rgba(0,0,0,0.10);
+      --border-light:rgba(0,0,0,0.06);
+      --text-primary:#1a1a2e;
+      --text-secondary:#6b7280;
+      --teal-bg:     #E1F5EE;
+      --teal:        #0F6E56;
+      --amber-bg:    #FAEEDA;
+      --amber:       #BA7517;
+      --purple-bg:   #EEEDFE;
+      --purple:      #534AB7;
+      --coral-bg:    #FAECE7;
+      --coral:       #D85A30;
+      --green-bg:    #EAF3DE;
+      --green:       #3B6D11;
+      --success-bg:  #EAF3DE;
+      --success-border:#639922;
+      --success-text:#27500A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAVIGATION ─────────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 40px;
+      background: var(--navy);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: 48px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .nav-logo-text strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #E8EAF0;
+      display: block;
+      line-height: 1.3;
+    }
+
+    .nav-logo-text span {
+      font-size: 10px;
+      color: var(--muted-blue);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted-blue);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #E8EAF0; }
+
+    .btn-nav-linkedin {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--link-blue);
+      border: 1px solid var(--navy-light);
+      border-radius: 20px;
+      padding: 6px 14px;
+      transition: background 0.2s;
+    }
+
+    .btn-nav-linkedin:hover { background: rgba(126,179,232,0.1); }
+    .btn-nav-linkedin svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    .btn-nav-cta {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      background: var(--silver);
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: background 0.2s;
+    }
+
+    .btn-nav-cta:hover { background: #d4dce8; }
+
+    /* ── HERO ───────────────────────────────────────────────────────── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 400px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-left {
+      padding: 56px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .hero-right {
+      padding: 56px 44px;
+      background: var(--off-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy-mid);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 18px;
+      color: var(--text-primary);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 460px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-navy {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--silver);
+      padding: 11px 22px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .btn-navy:hover { background: #1a3060; }
+
+    .btn-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0A66C2;
+      color: #fff;
+      padding: 11px 22px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .btn-linkedin:hover { background: #0850a0; }
+    .btn-linkedin svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .btn-ghost {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--silver);
+      padding: 10px 20px;
+      border-radius: 24px;
+      font-size: 13px;
+      background: transparent;
+      transition: background 0.2s;
+    }
+
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+
+    /* ── CREDENTIAL CARDS ───────────────────────────────────────────── */
+    .credential-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 14px;
+    }
+
+    .credential-card:last-child { margin-bottom: 0; }
+
+    .credential-card h3 {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .credential-card p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-weight: 500;
+      margin-top: 8px;
+      background: var(--silver-light);
+      color: var(--navy-mid);
+    }
+
+    /* ── SECTION SHARED ─────────────────────────────────────────────── */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    /* ── SERVICES ───────────────────────────────────────────────────── */
+    #services {
+      padding: 64px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    #services h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      background: var(--white);
+      transition: box-shadow 0.2s;
+    }
+
+    .service-card:hover { box-shadow: 0 4px 16px rgba(13,27,62,0.08); }
+
+    .service-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .service-card h3 { font-size: 14px; font-weight: 500; margin-bottom: 7px; }
+    .service-card p  { font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── ABOUT ──────────────────────────────────────────────────────── */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-left {
+      padding: 56px 44px;
+      background: var(--navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #E8EAF0;
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    .about-left p {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--muted-blue);
+      margin-bottom: 14px;
+    }
+
+    .about-left .hl { color: var(--silver); font-weight: 500; }
+    .about-left-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+
+    .about-right {
+      padding: 56px 44px;
+      background: var(--off-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-right .section-label { margin-bottom: 18px; }
+
+    .stat-row { display: flex; gap: 14px; margin-bottom: 14px; }
+
+    .stat-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 18px;
+      flex: 1;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--navy-mid);
+    }
+
+    .stat-desc {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    .expertise-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+      margin: 20px 0 12px;
+    }
+
+    .expertise-list { list-style: none; }
+
+    .expertise-list li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .expertise-list li:last-child { border-bottom: none; }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--navy-mid);
+      flex-shrink: 0;
+    }
+
+    /* ── WHO I SERVE ────────────────────────────────────────────────── */
+    #clients {
+      padding: 48px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    #clients p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      max-width: 620px;
+      line-height: 1.75;
+      margin-top: 8px;
+    }
+
+    .client-types { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+
+    .client-pill {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 8px 18px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: var(--off-white);
+    }
+
+    /* ── PROCESS ────────────────────────────────────────────────────── */
+    #process {
+      padding: 64px 40px;
+      border-bottom: 1px solid var(--border);
+      background: var(--off-white);
+    }
+
+    #process h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: var(--silver);
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .step h3 { font-size: 13px; font-weight: 500; margin-bottom: 7px; }
+    .step p  { font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ── CONTACT ────────────────────────────────────────────────────── */
+    #contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-left {
+      padding: 56px 44px;
+      background: var(--white);
+      border-right: 1px solid var(--border);
+    }
+
+    .contact-left h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .contact-left > p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .contact-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .contact-info-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--silver-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .contact-info-icon svg { width: 15px; height: 15px; }
+
+    .contact-info-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+
+    .contact-info-value { font-size: 13px; font-weight: 500; }
+    .contact-info-value a { color: var(--navy-mid); }
+    .contact-info-value a:hover { text-decoration: underline; }
+
+    .linkedin-card {
+      margin-top: 32px;
+      border: 1px solid #B5D4F4;
+      border-radius: 12px;
+      padding: 18px 20px;
+      background: var(--silver-light);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .linkedin-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .linkedin-avatar svg { width: 22px; height: 22px; }
+
+    .linkedin-card-text h4 {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .linkedin-card-text p { font-size: 12px; color: var(--navy-mid); }
+
+    .linkedin-card-text a {
+      font-size: 12px;
+      color: var(--navy-mid);
+      font-weight: 500;
+    }
+
+    .linkedin-card-text a:hover { text-decoration: underline; }
+
+    /* ── CONTACT FORM ───────────────────────────────────────────────── */
+    .contact-right {
+      padding: 56px 44px;
+      background: var(--off-white);
+    }
+
+    .contact-right h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 26px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--navy-mid);
+      box-shadow: 0 0 0 3px rgba(26,64,128,0.1);
+    }
+
+    .form-textarea { resize: vertical; min-height: 108px; }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--navy);
+      color: var(--silver);
+      padding: 13px 20px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-submit:hover { background: #1a3060; }
+    .btn-submit:disabled { background: #666; cursor: not-allowed; }
+
+    .form-note {
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .form-error {
+      display: none;
+      font-size: 12px;
+      color: #b91c1c;
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 8px;
+    }
+
+    .form-success {
+      display: none;
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-success p {
+      font-size: 14px;
+      color: var(--success-text);
+      font-weight: 500;
+    }
+
+    .form-success small {
+      font-size: 12px;
+      color: #3B6D11;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────────────────── */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--navy);
+      padding: 26px 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left { display: flex; align-items: center; gap: 14px; }
+
+    .footer-left img {
+      height: 38px;
+      width: 38px;
+      object-fit: contain;
+      border-radius: 3px;
+    }
+
+    .footer-logo-text strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #E8EAF0;
+      display: block;
+    }
+
+    .footer-logo-text span {
+      font-size: 10px;
+      color: var(--muted-blue);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-links { display: flex; gap: 20px; align-items: center; }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted-blue);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: #E8EAF0; }
+
+    .footer-linkedin {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--link-blue) !important;
+      font-weight: 500;
+    }
+
+    .footer-linkedin svg { width: 13px; height: 13px; }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--muted-blue);
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero, #about, #contact { grid-template-columns: 1fr; }
+      .hero-left { border-right: none; border-bottom: 1px solid var(--border); padding: 40px 24px; }
+      .hero-right { padding: 32px 24px; }
+      .hero h1 { font-size: 26px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      #services, #clients, #process { padding: 40px 24px; }
+      .about-left, .about-right, .contact-left, .contact-right { padding: 40px 24px; }
+      .about-left { border-right: none; }
+      .contact-left { border-right: none; }
+      footer { padding: 24px 20px; }
+      .stat-row { flex-wrap: wrap; }
+    }
+
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-btns { flex-direction: column; }
+      .about-left-btns { flex-direction: column; }
+      .footer-links { flex-wrap: wrap; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="https://i.imgur.com/placeholder.png" alt="WL Hughes Consulting Logo" onerror="this.style.display='none'">
+      <div class="nav-logo-text">
+        <strong>WL Hughes Consulting, LLC</strong>
+        <span>Financial &amp; Strategic Advisory</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn-nav-linkedin" href="https://www.linkedin.com/in/whughescpa" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a class="btn-nav-cta" href="#contact">Schedule a Consultation</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">CPA · MBA · 25+ Years Experience</div>
+      <h1>Strategic Financial Clarity for Nonprofits &amp; Small Business</h1>
+      <p class="hero-sub">Data-driven consulting in budgeting, policy development, analytics, and strategic planning — from a seasoned CFO who has led organizations through complexity.</p>
+      <div class="hero-btns">
+        <a class="btn-navy" href="#contact">Get in Touch</a>
+        <a class="btn-linkedin" href="https://www.linkedin.com/in/whughescpa" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          View LinkedIn Profile
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="credential-card">
+        <h3>Wendy L. Hughes, CPA, MBA</h3>
+        <p>Current CFO at large nonprofit · $130M+ budget oversight · 1,000+ employees across Florida &amp; Georgia</p>
+        <span class="tag">Licensed CPA · FL &amp; GA</span>
+      </div>
+      <div class="credential-card">
+        <h3>25+ Years in Financial Leadership</h3>
+        <p>Interim CFO at 5+ organizations · Behavioral health, domestic violence, early childhood education, mental health</p>
+        <span class="tag">Nonprofit Specialist</span>
+      </div>
+      <div class="credential-card">
+        <h3>MBA in Healthcare Administration</h3>
+        <p>Valdosta State University · BBA in Accounting, Georgia State University</p>
+        <span class="tag">Abila MIP · NetSuite · Paylocity</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-label">What I Offer</div>
+    <h2>Consulting Services</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon" style="background:#E8EEF7;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="8" width="3" height="6" fill="#1A4080" rx="1"/><rect x="6.5" y="5" width="3" height="9" fill="#1A4080" rx="1"/><rect x="11" y="2" width="3" height="12" fill="#1A4080" rx="1"/></svg>
+        </div>
+        <h3>Data Analytics &amp; Reporting</h3>
+        <p>Turn raw financial data into dashboards and KPIs that inform real decisions. Benchmarking, trend analysis, and performance modeling for leadership teams.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" style="background:var(--amber-bg);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#BA7517" stroke-width="1.5"/><path d="M8 5v3l2 2" stroke="#BA7517" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Budgeting &amp; Forecasting</h3>
+        <p>Develop annual budgets, cash flow projections, and productivity models aligned with your grant funding, program goals, and operational realities.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" style="background:var(--teal-bg);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 4h10M3 8h7M3 12h5" stroke="#0F6E56" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Policy Development</h3>
+        <p>Create or strengthen financial and operational policies that meet audit standards, funder requirements, and internal control best practices.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" style="background:var(--purple-bg);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="3" y="2" width="4" height="5" rx="1" fill="#534AB7"/><rect x="9" y="2" width="4" height="5" rx="1" fill="#534AB7"/><rect x="3" y="9" width="4" height="5" rx="1" fill="#AFA9EC"/><rect x="9" y="9" width="4" height="5" rx="1" fill="#AFA9EC"/></svg>
+        </div>
+        <h3>Job Description Development</h3>
+        <p>Design clear, compliant, and role-appropriate job descriptions that align staffing structures with your organizational chart and funding requirements.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" style="background:var(--coral-bg);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 2v12M4 8h8M12 5l-4 3 4 3" stroke="#D85A30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Standard Operating Procedures</h3>
+        <p>Document workflows across finance, HR, and operations so your team can execute consistently — and survive staff transitions without losing institutional knowledge.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" style="background:var(--green-bg);">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L3 6v8h10V6L8 2z" stroke="#3B6D11" stroke-width="1.5" stroke-linejoin="round"/><rect x="6" y="10" width="4" height="4" rx="0.5" fill="#3B6D11"/></svg>
+        </div>
+        <h3>Strategic Planning</h3>
+        <p>Facilitate or support short- and long-term planning processes, financial sustainability analyses, and board-level strategy development for nonprofits and small organizations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left">
+      <h2>A CFO-Level Partner, Not a Junior Consultant</h2>
+      <p>WL Hughes Consulting was founded on a simple premise: small nonprofits and growing businesses deserve the same caliber of financial leadership that large organizations rely on every day.</p>
+      <p>Wendy Hughes brings <span class="hl">over 25 years of hands-on CFO experience</span> across behavioral health, early childhood education, domestic violence services, and private equity-backed companies — paired with the nimbleness of a boutique practice.</p>
+      <p>This is <span class="hl">project-based and interim work</span>, meaning you get senior-level expertise without the overhead of a full-time executive hire.</p>
+      <div class="about-left-btns">
+        <a class="btn-ghost" href="#contact">Start a Conversation</a>
+        <a class="btn-linkedin" href="https://www.linkedin.com/in/whughescpa" target="_blank" rel="noopener noreferrer" style="padding:9px 18px;font-size:13px;">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="section-label">By the Numbers</div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num">25+</div><div class="stat-desc">Years CFO &amp; financial leadership</div></div>
+        <div class="stat-box"><div class="stat-num">$130M+</div><div class="stat-desc">Current budget under management</div></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-num">5</div><div class="stat-desc">Interim executive engagements</div></div>
+        <div class="stat-box"><div class="stat-num">3</div><div class="stat-desc">MIP system implementations</div></div>
+      </div>
+      <div class="expertise-label">Areas of Deep Expertise</div>
+      <ul class="expertise-list">
+        <li><span class="dot"></span>Nonprofit fund accounting &amp; grant compliance</li>
+        <li><span class="dot"></span>Federal, state &amp; local grant reporting</li>
+        <li><span class="dot"></span>Abila MIP, NetSuite, Paylocity systems</li>
+        <li><span class="dot"></span>Internal controls assessment &amp; audit prep</li>
+        <li><span class="dot"></span>Board &amp; stakeholder communications</li>
+        <li><span class="dot"></span>Mergers, acquisitions &amp; entity onboarding</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHO I SERVE -->
+  <section id="clients">
+    <div class="section-label">Who I Serve</div>
+    <p>I specialize in mission-driven organizations and small businesses that need experienced financial and operational guidance — without a long-term executive commitment.</p>
+    <div class="client-types">
+      <div class="client-pill">Nonprofit organizations</div>
+      <div class="client-pill">Behavioral health centers</div>
+      <div class="client-pill">Early childhood education programs</div>
+      <div class="client-pill">Head Start &amp; Early Head Start grantees</div>
+      <div class="client-pill">Social service agencies</div>
+      <div class="client-pill">Small businesses</div>
+      <div class="client-pill">Organizations in transition or growth</div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-label">How It Works</div>
+    <h2>The Engagement Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Discovery Call</h3>
+        <p>We discuss your organization's needs, current pain points, and what a successful engagement looks like — no cost, no obligation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Scope &amp; Proposal</h3>
+        <p>I'll outline the deliverables, timeline, and pricing — structured as project-based or retainer work to fit your budget.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Engagement</h3>
+        <p>We work collaboratively, keeping your leadership team informed and your board-level outputs polished and ready to present.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Handoff &amp; Support</h3>
+        <p>Deliverables are designed for your team to own and sustain. Optional ongoing advisory support is available after project close.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-left">
+      <div class="section-label">Get in Touch</div>
+      <h2>Let's Talk About Your Organization</h2>
+      <p>Whether you need a one-time policy review, a full budget build, or ongoing strategic support — reach out and we'll find the right fit.</p>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1A4080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value"><a href="mailto:wlhughescpa@gmail.com">wlhughescpa@gmail.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1A4080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.59 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-value"><a href="tel:+19043379433">(904) 337-9433</a></div>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1A4080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-value">Jacksonville, FL</div>
+        </div>
+      </div>
+
+      <div class="contact-info-row">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1A4080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Availability</div>
+          <div class="contact-info-value">Project-based &amp; part-time engagements</div>
+        </div>
+      </div>
+
+      <div class="linkedin-card">
+        <div class="linkedin-avatar">
+          <svg viewBox="0 0 24 24" fill="#C4CEDE"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </div>
+        <div class="linkedin-card-text">
+          <h4>Wendy L. Hughes, CPA, MBA</h4>
+          <p>Chief Financial Officer · Financial Consultant</p>
+          <a href="https://www.linkedin.com/in/whughescpa" target="_blank" rel="noopener noreferrer">linkedin.com/in/whughescpa →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <h3>Send a Message</h3>
+      <div class="form-success" id="formSuccess">
+        <p>Thank you! Your message has been sent.</p>
+        <small>Wendy will be in touch within 2 business days at the email you provided.</small>
+      </div>
+      <div id="formBody">
+        <div class="form-error" id="formError"></div>
+        <div class="form-row">
+          <div>
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="form-input" type="text" id="firstName" placeholder="Jane">
+          </div>
+          <div>
+            <label class="form-label" for="lastName">Last Name</label>
+            <input class="form-input" type="text" id="lastName" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="org">Organization</label>
+          <input class="form-input" type="text" id="org" placeholder="Your nonprofit or business name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" placeholder="jane@yourorg.org">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="service">Service Area of Interest</label>
+          <select class="form-select" id="service">
+            <option value="">Select a service...</option>
+            <option>Data Analytics &amp; Reporting</option>
+            <option>Budgeting &amp; Forecasting</option>
+            <option>Policy Development</option>
+            <option>Job Description Development</option>
+            <option>Standard Operating Procedures</option>
+            <option>Strategic Planning</option>
+            <option>Interim CFO / Controller Support</option>
+            <option>Multiple services / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Tell me about your needs</label>
+          <textarea class="form-textarea" id="message" placeholder="Briefly describe your organization, the challenge you're facing, and what you're hoping to accomplish..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="referral">How did you hear about us?</label>
+          <select class="form-select" id="referral">
+            <option value="">Select one...</option>
+            <option>LinkedIn</option>
+            <option>Referral from a colleague</option>
+            <option>Google search</option>
+            <option>Professional association</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button class="btn-submit" id="btnSubmit" onclick="handleSubmit()">Send Message</button>
+        <p class="form-note">Responses typically within 2 business days. All inquiries are confidential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <img src="https://i.imgur.com/placeholder.png" alt="WL Hughes Consulting" onerror="this.style.display='none'">
+      <div class="footer-logo-text">
+        <strong>WL Hughes Consulting, LLC</strong>
+        <span>wlhughescpa.com · Licensed CPA, FL &amp; GA</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a class="footer-linkedin" href="https://www.linkedin.com/in/whughescpa" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:wlhughescpa@gmail.com">Email</a>
+      <a href="tel:+19043379433">(904) 337-9433</a>
+      <span class="footer-copy">&copy; 2025 WL Hughes Consulting, LLC</span>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit() {
+      var firstName = document.getElementById('firstName').value.trim();
+      var email     = document.getElementById('email').value.trim();
+      var message   = document.getElementById('message').value.trim();
+      var errEl     = document.getElementById('formError');
+      var btn       = document.getElementById('btnSubmit');
+
+      errEl.style.display = 'none';
+
+      if (!firstName || !email || !message) {
+        errEl.textContent = 'Please fill in your name, email, and message before sending.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errEl.textContent = 'Please enter a valid email address.';
+        errEl.style.display = 'block';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      // Simulate send (replace with Formspree/EmailJS endpoint in production)
+      setTimeout(function() {
+        document.getElementById('formBody').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, 800);
+    }
+
+    // Smooth scroll polyfill for older browsers
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
